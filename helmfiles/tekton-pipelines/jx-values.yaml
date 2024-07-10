@@ -30,6 +30,7 @@ jxRequirements:
     gitName: github
     gitServer: https://github.com
     provider: minikube
+    registry: 10.110.41.99
   environments:
   - key: dev
     owner: nojussta
@@ -37,7 +38,7 @@ jxRequirements:
   - key: staging
   - key: production
   ingress:
-    domain: change.me
+    domain: 192.168.49.2.nip.io
     kind: ingress
     namespaceSubDomain: -tekton-pipelines.
     tls:

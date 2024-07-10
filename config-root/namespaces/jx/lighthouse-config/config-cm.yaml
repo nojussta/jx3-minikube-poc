@@ -8,6 +8,7 @@ data:
     in_repo_config:
       enabled:
         nojussta/jx3-minikube-poc: true
+        nojussta/quickstart-test: true
     plank: {}
     pod_namespace: jx
     prowjob_namespace: jx
@@ -20,6 +21,7 @@ data:
         skip-unknown-contexts: false
       merge_method:
         nojussta/jx3-minikube-poc: merge
+        nojussta/quickstart-test: merge
       queries:
       - labels:
         - approved
@@ -31,6 +33,7 @@ data:
         - needs-rebase
         repos:
         - nojussta/jx3-minikube-poc
+        - nojussta/quickstart-test
       - labels:
         - updatebot
         missingLabels:
@@ -41,7 +44,8 @@ data:
         - needs-rebase
         repos:
         - nojussta/jx3-minikube-poc
-      target_url: http://lighthouse-jx./merge/status
+        - nojussta/quickstart-test
+      target_url: http://lighthouse-jx.192.168.49.2.nip.io/merge/status
 kind: ConfigMap
 metadata:
   creationTimestamp: null

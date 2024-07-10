@@ -1,0 +1,22 @@
+apiVersion: jenkins.io/v1
+kind: SourceRepository
+metadata:
+  creationTimestamp: null
+  labels:
+    owner: nojussta
+    provider: github
+    repository: quickstart-test
+    gitops.jenkins-x.io/pipeline: 'namespaces'
+  name: nojussta-quickstart-test
+  namespace: jx
+spec:
+  httpCloneURL: https://github.com/nojussta/quickstart-test.git
+  org: nojussta
+  provider: https://github.com
+  providerKind: github
+  providerName: github
+  repo: quickstart-test
+  scheduler:
+    kind: ""
+    name: in-repo
+  url: https://github.com/nojussta/quickstart-test
