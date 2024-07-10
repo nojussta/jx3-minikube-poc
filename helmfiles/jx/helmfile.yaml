@@ -41,7 +41,11 @@ releases:
   - ../../versionStream/charts/jxgh/lighthouse/values.yaml.gotmpl
   - jx-values.yaml
 - chart: jxgh/lighthouse-webui-plugin
+  version: 0.1.9
   name: lighthouse-webui-plugin
+  values:
+  - ../../versionStream/charts/jxgh/lighthouse-webui-plugin/values.yaml.gotmpl
+  - jx-values.yaml
 - chart: jxgh/bucketrepo
   version: 0.6.0
   name: bucketrepo

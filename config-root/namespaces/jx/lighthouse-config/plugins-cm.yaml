@@ -6,6 +6,10 @@ data:
       repos:
       - nojussta/jx3-minikube-poc
       require_self_approval: true
+    - lgtm_acts_as_approve: true
+      repos:
+      - nojussta/quickstart-test
+      require_self_approval: true
     cat: {}
     cherry_pick_unapproved: {}
     config_updater:
@@ -21,12 +25,31 @@ data:
         name: cd-indicators
       - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
         name: lighthouse-webui-plugin
+      nojussta/quickstart-test:
+      - endpoint: http://cd-indicators.jx.svc.cluster.local/lighthouse/events
+        name: cd-indicators
+      - endpoint: http://lighthouse-webui-plugin.jx.svc.cluster.local/lighthouse/events
+        name: lighthouse-webui-plugin
     label:
       additional_labels: null
     owners: {}
     plugins:
       nojussta/jx3-minikube-poc:
       - config-updater
+      - approve
+      - assign
+      - help
+      - hold
+      - lgtm
+      - lifecycle
+      - override
+      - size
+      - trigger
+      - wip
+      - cat
+      - dog
+      - pony
+      nojussta/quickstart-test:
       - approve
       - assign
       - help
@@ -52,6 +75,11 @@ data:
     - repos:
       - nojussta/jx3-minikube-poc
       trusted_org: nojussta
+    - repos:
+      - nojussta/quickstart-test
+      trusted_org: nojussta
+    welcome:
+    - message_template: Welcome
 kind: ConfigMap
 metadata:
   creationTimestamp: null
