@@ -16,16 +16,24 @@ spec:
     provider: minikube
   environments:
   - key: dev
+    owner: nojussta
+    repository: jx3-minikube-poc
   - key: staging
   - key: production
   ingress:
+<<<<<<< HEAD
     domain: 192.168.49.2.nip.io
+=======
+    domain: ""
+>>>>>>> 2d2965f8f7b1dddd581d6e4f0ec3c5c173cfe050
     kind: ingress
     namespaceSubDomain: -jx.
     tls:
       email: ""
       enabled: false
       production: false
+  pipelineUser:
+    username: nojussta
   repository: bucketrepo
   secretStorage: local
   vault: {}
